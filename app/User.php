@@ -41,7 +41,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-         'email', 'password',
+        'email', 'password',
     ];
 
     /**
@@ -53,6 +53,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function profile()
+    {
+        return $this->hasOne('App\Profile');
+    }
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -61,4 +66,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }
