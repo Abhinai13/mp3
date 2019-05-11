@@ -32,7 +32,7 @@ class QuestionController extends Controller
     {
         $question = new Question;
         $edit = FALSE;
-        return view('questionForm', ['question' => $question,'edit' => $edit  ]);
+        return view('questionform', ['question' => $question,'edit' => $edit  ]);
     }
     /**
      * Store a newly created resource in storage.
@@ -76,7 +76,7 @@ class QuestionController extends Controller
     public function edit(Question $question)
     {
         $edit = TRUE;
-        return view('questionForm', ['question' => $question, 'edit' => $edit ]);
+        return view('questionform', ['question' => $question, 'edit' => $edit ]);
     }
     /**
      * Update the specified resource in storage.
