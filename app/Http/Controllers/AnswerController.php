@@ -24,7 +24,7 @@ class AnswerController extends Controller
     {
         $answer = new Answer;
         $edit = FALSE;
-        return view('answerForm', ['answer' => $answer,'edit' => $edit, 'question' =>$question  ]);
+        return view('answerform', ['answer' => $answer,'edit' => $edit, 'question' =>$question  ]);
     }
     /**
      * Store a newly created resource in storage.
