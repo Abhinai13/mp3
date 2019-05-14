@@ -69,7 +69,7 @@ class AnswerController extends Controller
     {
         $answer = Answer::find($answer);
         $edit = TRUE;
-        return view('answerForm', ['answer' => $answer, 'edit' => $edit, 'question'=>$question ]);
+        return view('answerform', ['answer' => $answer, 'edit' => $edit, 'question'=>$question ]);
     }
     /**
      * Update the specified resource in storage.
